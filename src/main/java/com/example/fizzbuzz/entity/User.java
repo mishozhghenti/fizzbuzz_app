@@ -1,7 +1,6 @@
 package com.example.fizzbuzz.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Date;
@@ -20,13 +19,11 @@ public class User {
     private String fullName;
     @NotBlank
     @Size(max = 50)
-    @Email
     private String username;
     @NotBlank
     @Size(max = 120)
     private String password;
     private Date created;
-
 
     public User() {
     }
@@ -35,9 +32,10 @@ public class User {
         this.id = id;
     }
 
-    public User(String fullName, String email, String password) {
+    public User(String fullName, String username, String password) {
         this.fullName = fullName;
         this.password = password;
+        this.username = username;
     }
 
     @PrePersist
