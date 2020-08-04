@@ -16,8 +16,7 @@ public class FizzBuzzController {
 
     @GetMapping("/evaluation")
     @PreAuthorize("hasRole('USER')")
-    public ResponseEntity addBookmark(Authentication authentication) {
-
+    public ResponseEntity evaluationFizzBuzz(Authentication authentication) {
         return new ResponseEntity(HttpStatus.OK);
     }
 }
