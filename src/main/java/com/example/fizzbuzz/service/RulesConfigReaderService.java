@@ -1,7 +1,7 @@
 package com.example.fizzbuzz.service;
 
 import com.example.fizzbuzz.config.RulesConfigModel;
-import com.example.fizzbuzz.utils.JsonUtils;
+import com.example.fizzbuzz.utils.Utils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class RulesConfigReaderService {
     public void loadConfig() {
         rulesMap = new HashMap<>();
 
-        List<RulesConfigModel> allRules = JsonUtils.fromFileToList(RulesConfigService.class.getClassLoader().getResource(providersConfigFileName).getPath(), new TypeReference<List<RulesConfigModel>>() {
+        List<RulesConfigModel> allRules = Utils.fromFileToList(RulesConfigService.class.getClassLoader().getResource(providersConfigFileName).getPath(), new TypeReference<List<RulesConfigModel>>() {
         });
 
         fillUpMapWithRules(0, allRules);
