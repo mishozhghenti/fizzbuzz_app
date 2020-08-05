@@ -3,8 +3,6 @@ package com.example.fizzbuzz.config;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import java.util.List;
-
 @JsonPropertyOrder({
         "rule_id",
         "rule_result",
