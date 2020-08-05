@@ -1,0 +1,17 @@
+[
+  {
+    "rule_id": 1,
+    "rule_result": "Fizz",
+    "dividable_by": 3
+  },
+  {
+    "rule_id": 2,
+    "rule_result": "Buzz",
+    "dividable_by": 5
+  },
+  {
+    "rule_id": 3,
+    "rule_result": "FizzBuzz",
+    "dividable_by": 15
+  }
+]
