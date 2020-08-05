@@ -193,7 +193,7 @@ If an authorization passed we would get an output as a list of FizzBuzz logic du
 ```
 It is a list of rules where each of it contains ID, output and divisible number. <br/>
 
-In case we want to add new rule as mentioned above (Divisible by 7 - "Haha" Rule) we would have:
+In case we want to add a new rule as mentioned above (Divisible by 7 - "Haha" Rule) we would have:
 ```
 [
   {
