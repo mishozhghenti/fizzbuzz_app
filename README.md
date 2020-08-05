@@ -64,7 +64,7 @@ A Token is passed in Authorization Headers like this:<br/>
 ```
 "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXNoby56aGdoZW50aSIsImlhdCI6MTU5NjY1MzQ3MSwiZXhwIjoxNTk2NzM5ODcxfQ.HZiernMAa6Ydv-wGsxNBnoGA0NKnGSIge-DG3q8it-TweuPZ5iR4igmM2LVnvM70wyVbtSj_oGBDxN0gSb-YhA"
 ```
-If an authorization passed we would get an output as a list of FizzBuzz logic due to configured rules. <br/>
+If an authorization passed, we would get an output as a list of FizzBuzz logic due to configured rules. <br/>
 [
     1,
     2,
