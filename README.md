@@ -222,7 +222,7 @@ In case we want to add a new rule as mentioned above (Divisible by 7 - "Haha" Ru
 
 # From the suggestions achieved:
 * No Loops (replaced with Recursion)
-* No %, /, *, - ( subtraction operation replaced: a-b == a + ~b + 1)
+* No %, /, *, - ( replaced with the principle as (a-b) == (a + ~b + 1) )
 * Only +
 * Dockerize the application
 
