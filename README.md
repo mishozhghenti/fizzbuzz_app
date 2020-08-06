@@ -30,8 +30,11 @@ Body is in a JSON format:
 	"fullName":"Mikheil Zhghenti",
 	"username":"misho.zhghenti",
 	"password":"123456",
+	"role":"ROLE_ADMIN"
 }
 ```
+
+Roles could be anything (for instance: `ROLE_USER` or etc.), however only `ROLE_ADMIN` is privileged to call `{host}/api/fizzbuzz/evaluation` controller which is discussed further.
 * #### Sign In
 ##### `{host}/api/auth/signin` POST request
 ```
@@ -46,9 +49,9 @@ If it is a successful we would receive a response like this:
 ```
 {
     "roles": [
-        "ROLE_USER"
+        "ROLE_ADMIN"
     ],
-    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXNoby56aGdoZW50aSIsImlhdCI6MTU5NjY1MzQ3MSwiZXhwIjoxNTk2NzM5ODcxfQ.HZiernMAa6Ydv-wGsxNBnoGA0NKnGSIge-DG3q8it-TweuPZ5iR4igmM2LVnvM70wyVbtSj_oGBDxN0gSb-YhA",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXNoby56aGdoZW50aSIsImlhdCI6MTU5NjcwNTcwMSwiZXhwIjoxNTk2NzkyMTAxfQ.FYh8iRT7rgu6UuQmJl_-L0pGAaXkOvaNnosgiFl98HNDy0FPeREe-PhhryuRnBlOIyC5obhCJP29gQeJd7Wmdg",
     "type": "Bearer",
     "id": 1,
     "fullName": "Mikheil Zhghenti",
@@ -62,9 +65,10 @@ Returns FizzBuzz output
 
 A Token is passed in Authorization Headers like this:<br/>
 ```
-"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXNoby56aGdoZW50aSIsImlhdCI6MTU5NjY1MzQ3MSwiZXhwIjoxNTk2NzM5ODcxfQ.HZiernMAa6Ydv-wGsxNBnoGA0NKnGSIge-DG3q8it-TweuPZ5iR4igmM2LVnvM70wyVbtSj_oGBDxN0gSb-YhA"
+"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXNoby56aGdoZW50aSIsImlhdCI6MTU5NjcwNTcwMSwiZXhwIjoxNTk2NzkyMTAxfQ.FYh8iRT7rgu6UuQmJl_-L0pGAaXkOvaNnosgiFl98HNDy0FPeREe-PhhryuRnBlOIyC5obhCJP29gQeJd7Wmdg"
 ```
 If an authorization passed, we would get an output as a list of FizzBuzz logic due to configured rules. <br/>
+P.S if several rules are satisfied, only one with the 'highest' rule (a rule with the highest divisible number among the satisfied rules) will be executed. 
 [
     1,
     2,
