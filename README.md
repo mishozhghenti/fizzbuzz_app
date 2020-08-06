@@ -58,7 +58,7 @@ If it is a successful we would receive a response like this:
     "userName": "misho.zhghenti"
 }
 ```
-
+Where `token` is actually `JWT` token
 * #### FizzBuzz Result
 Returns FizzBuzz output
 ##### `{host}/api/fizzbuzz/evaluation` GET request
