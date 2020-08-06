@@ -63,6 +63,7 @@ public class AuthController {
         try {
             userRepository.save(new User(signUpRequest.getFullName(),
                     signUpRequest.getUsername(),
+                    signUpRequest.getRole(),
                     encoder.encode(signUpRequest.getPassword())));
             return new ResponseEntity<>("Registered Successfully", HttpStatus.OK);
         } catch (DataIntegrityViolationException e) {

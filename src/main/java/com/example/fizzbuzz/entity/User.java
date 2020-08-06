@@ -23,6 +23,7 @@ public class User {
     @NotBlank
     @Size(max = 120)
     private String password;
+    private String role;
     private Date created;
 
     public User() {
@@ -32,10 +33,19 @@ public class User {
         this.id = id;
     }
 
-    public User(String fullName, String username, String password) {
+    public User(String fullName, String username, String role, String password) {
         this.fullName = fullName;
         this.password = password;
+        this.role = role;
         this.username = username;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @PrePersist
