@@ -19,7 +19,7 @@ public class FizzBuzzController {
     RulesEvaluationService rulesEvaluationService;
 
     @GetMapping("/evaluation")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity evaluationFizzBuzz() {
         return new ResponseEntity(rulesEvaluationService.evaluate(), HttpStatus.OK);
     }
