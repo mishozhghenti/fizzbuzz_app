@@ -9,9 +9,9 @@
 * Docker
 
 ##### Build project:
-    mvn clean install
+    docker-compose build
 ##### Run project
-    mvn spring-boot:run
+    docker-compose up
 ##### By default, application runs on 8080 port. Provided `application.property` for detailed configurations.
 
 ## Application Architecture
