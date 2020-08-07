@@ -1,8 +1,6 @@
 package com.example.fizzbuzz.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import java.util.Date;
 
 
@@ -15,14 +13,13 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank
+    @Column(nullable = false)
     private String fullName;
-    @NotBlank
-    @Size(max = 50)
+    @Column(nullable = false)
     private String username;
-    @NotBlank
-    @Size(max = 120)
+    @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
     private String role;
     private Date created;
 

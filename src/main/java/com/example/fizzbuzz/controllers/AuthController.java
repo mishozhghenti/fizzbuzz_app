@@ -67,7 +67,7 @@ public class AuthController {
                     encoder.encode(signUpRequest.getPassword())));
             return new ResponseEntity<>("Registered Successfully", HttpStatus.OK);
         } catch (DataIntegrityViolationException e) {
-            return new ResponseEntity<>("UserName is already in use!", HttpStatus.CONFLICT);
+            return new ResponseEntity<>("User can not be registered with these parameters.", HttpStatus.CONFLICT);
         } catch (Exception e) {
             return new ResponseEntity<>("Error Occurred", HttpStatus.INTERNAL_SERVER_ERROR);
         }
